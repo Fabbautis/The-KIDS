@@ -6,6 +6,7 @@ public class RandomWhiteboard : MonoBehaviour
 {
     public GameObject whiteboard;
     public Material[] whiteboardDesigns;
+   
     // Start is called before the first frame update
     void Start()
     {

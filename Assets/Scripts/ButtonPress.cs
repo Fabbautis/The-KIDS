@@ -15,8 +15,11 @@ public class ButtonPress : MonoBehaviour
 
     public GameObject prefab;
     public UnityEvent onPress, onReleased;
+    public AudioClip buttonSound;
+    private AudioSource buttonAudio;
 
     void Start() {
+        buttonAudio = GetComponent<AudioSource>();
         startPos = transform.localPosition;
         joint = GetComponent<ConfigurableJoint>();
     }
@@ -32,6 +35,7 @@ public class ButtonPress : MonoBehaviour
     private void Pressed() {
         isPressed = true;
         onPress.Invoke();
+        buttonAudio.PlayOneShot(buttonSound, 1.0f);
     }
 
     private void Released () {
@@ -48,16 +52,3 @@ public class ButtonPress : MonoBehaviour
     }
    
 }
-
-
- /*/public void SpawnObjectRandomSize(int numbers) {
-        for (int i = 0; i < numbers; i++)
-        {
-            GameObject go = Instantiate(prefab, Vector3.zero, Quaternion.identity);
-            Vector3 newScale = go.transform.localScale;
-            Vector3 randomDeform = Random.insideUnitCircle * 10;
-            Debug.Log(randomDeform);
-            go.transform.localScale += randomDeform;
-            go.GetComponent<Renderer>().material.color = Random.ColorHSV();
-        }
-    }/*/
