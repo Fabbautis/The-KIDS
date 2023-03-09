@@ -67,8 +67,6 @@ public class JoystickControl : MonoBehaviour
     private void rotateCamera(){
         int currentCameraIndex = GameObject.Find("Screen").GetComponent<TeacherComputer>().currentCameraIndex;
         currentCamera = cameraArray[currentCameraIndex];
-        Debug.Log(currentCamera.transform.localRotation.eulerAngles.x);
-        Debug.Log(currentCamera.transform.localRotation.eulerAngles.y);
         
         if (moveCamera)
         {

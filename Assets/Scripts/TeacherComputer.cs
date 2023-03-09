@@ -28,6 +28,7 @@ public class TeacherComputer : MonoBehaviour
         rend.material.SetTexture("_MainTex", renderTextures[currentCameraIndex], default);
         //put camera rotation to default position
         Camera currentCamera = GameObject.Find("Joystick").GetComponent<JoystickControl>().cameraArray[currentCameraIndex];
+        
         Vector3 currentCameraRotation = GameObject.Find("Joystick").GetComponent<JoystickControl>().cameraRotationArray[currentCameraIndex];
         currentCamera.transform.localRotation = Quaternion.Euler(currentCameraRotation);
     }

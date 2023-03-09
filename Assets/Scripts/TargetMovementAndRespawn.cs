@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TargetMovementAndRespawn : MonoBehaviour
+{
+    //.5 to -6 x
+    //30 to 20z
+
+    private float speed = 0.25f;
+    void Start(){
+        respawnTarget();
+        InvokeRepeating("moveTarget", 0.0f, 0.1f);
+    }
+    void Update()
+    {
+        gameObject.transform.LookAt(GameObject.Find("XR Origin").transform, Vector3.up);
+
+    }
+    public void respawnTarget(){
+        Vector3 newSpot = new Vector3(Random.Range(-6.0f, 0.5f),Random.Range(7.0f, 11.5f),Random.Range(20.0f, 30.0f));
+        gameObject.transform.position = newSpot;
+    }
+
+    private void moveTarget(){
+        var position = gameObject.transform.position;
+        gameObject.transform.position = new Vector3((1 * speed) + position.x, position.y, position.z);
+        if(gameObject.transform.position.x > 4.25 || gameObject.transform.position.x < -8){
+            speed *=-1;
+        }
+        
+    }
+}
