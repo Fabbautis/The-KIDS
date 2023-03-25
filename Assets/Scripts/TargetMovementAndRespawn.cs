@@ -18,7 +18,7 @@ public class TargetMovementAndRespawn : MonoBehaviour
 
     }
     public void respawnTarget(){
-        Vector3 newSpot = new Vector3(Random.Range(-6.0f, 0.5f),Random.Range(7.0f, 11.5f),Random.Range(20.0f, 30.0f));
+        Vector3 newSpot = new Vector3(Random.Range(-6.0f, 0.5f),5.6f,Random.Range(21.5f, 31.0f));
         gameObject.transform.position = newSpot;
     }
 

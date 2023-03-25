@@ -8,6 +8,7 @@ public class HandController : MonoBehaviour
     public InputActionReference triggerInput;
     
     private Animator animator;
+    public bool isGrabbing = false;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -23,6 +24,12 @@ public class HandController : MonoBehaviour
         animator.SetFloat("Grip", grip);
         animator.SetFloat("Trigger", trigger);
 
+    if (grip ==1.0f){
+        isGrabbing = true;
+    }
+    else{
+        isGrabbing = false;
+    }
 
     }
 }

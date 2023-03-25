@@ -8,6 +8,7 @@ public class JoystickControl : MonoBehaviour
     //joystick variables
     public Transform topOfJoystick;
     private Vector3 joystickDefaultPosition;
+    //public HandController isGrabbingVar;
 
     //joystick movement variables
     private bool moveCamera = false;
@@ -33,6 +34,7 @@ public class JoystickControl : MonoBehaviour
     void Start(){
         joystickDefaultPosition = new Vector3(transform.position.x,transform.position.y,transform.position.z);
         joystickAudio = GetComponent<AudioSource>();
+        //isGrabbingVar = GetComponent<HandController>();
         //Get the default rotation for cameras
         int index = 0;
         foreach (Camera cctvCamera in cameraArray){
@@ -47,7 +49,7 @@ public class JoystickControl : MonoBehaviour
     }
     
     private void OnTriggerStay(Collider other){
-        if (other.CompareTag("Hands")){
+        if (other.CompareTag("Hands") /*&& isGrabbingVar.isGrabbing*/){
             transform.LookAt(other.transform.position, transform.up);
             joystickAudio.loop = true;
             joystickAudio.Play();

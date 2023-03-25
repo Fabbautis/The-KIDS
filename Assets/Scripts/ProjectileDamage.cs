@@ -1,35 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProjectileDamage : MonoBehaviour
 {
-    public double health = 100.0;
+    public double health = 1.0;
     private bool isDead = false;
     private float timer;
     private float timeSinceDead =0;
     private TargetMovementAndRespawn respawner;
+    private DespawnTimer despawnTimer;
+    private bool isInRespawnRoom = false;
+    public AudioClip spawnSFX;
+    public AudioClip deathSFX;
+    private AudioSource playerSourcePlayer;
 
     private void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "TeacherRoomRespawn"){
+            isInRespawnRoom = true;
+        }
         respawner = GetComponent<TargetMovementAndRespawn>();
+        playerSourcePlayer = GetComponent<AudioSource>();
     }   
     private void Update()
     {
-        timer = Time.deltaTime;
+        timer += Time.deltaTime;
         if (isDead){
-            Debug.Log("" + timer + " " + timeSinceDead + 5.0f);
         }
-        if (isDead && timer< timeSinceDead +5.0f){
+        if (isDead && timer> (timeSinceDead +5.0f)){
             respawner.respawnTarget();
+            playerSourcePlayer.PlayOneShot(spawnSFX, 0.6f);
+            isDead =false;
         }
 
     }
      private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Teacher Projectile")){
-            Debug.Log(other.name);
             takeDamage(other.gameObject);
-            other.gameObject.SetActive(false);
+            if (isInRespawnRoom){
+                despawnTimer = other.gameObject.GetComponent<DespawnTimer>();
+                despawnTimer.SelfDestruct();
+            }
+            else if (!isInRespawnRoom){
+                Destroy(other.gameObject);
+            }
         }
     }
 
@@ -56,13 +73,15 @@ public class ProjectileDamage : MonoBehaviour
             case "topplewear":
                 health -= 20;
             break;
+            default:
+                health -= 15;
+            break;
         }
-        isDead = true;
-        timeSinceDead = timer;
-        Debug.Log(health);
         if (health <= 0){
-            Debug.Log("Just died");
             gameObject.transform.position += new Vector3(0.0f, 100.0f, 0.0f);
+            isDead = true;
+            playerSourcePlayer.PlayOneShot(deathSFX, 1.0f);
+            timeSinceDead = timer;
         }
     }
 }

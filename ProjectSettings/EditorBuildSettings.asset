@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 6623d61abd3668240887d9a090a46844
   - enabled: 1
-    path: Assets/Scenes/TeacherRoom.unity
+    path: Assets/Scenes/TeacherRoomButton.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/TeacherRoomRespawn.unity
+    guid: aa4a0773840f0194c983b55efb9d28dc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5e78be65b2a859a4cb731c457781dda9, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: a3df8d88dbc579e44a39c9fefb0e99fd, type: 2}

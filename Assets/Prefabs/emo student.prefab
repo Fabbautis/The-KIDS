@@ -839,6 +839,8 @@ GameObject:
   - component: {fileID: 2328248263984060102}
   - component: {fileID: 8152936839458668678}
   - component: {fileID: 8152936839458668679}
+  - component: {fileID: 7916922012355862341}
+  - component: {fileID: 4121064815718698899}
   m_Layer: 0
   m_Name: emo student
   m_TagString: Untagged
@@ -921,3 +923,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.77591014, y: 3.0406952, z: 1}
   m_Center: {x: 0.19906795, y: 1.4955974, z: 0}
+--- !u!114 &7916922012355862341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071486660176057862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c8a976cc7e5074aa55d60f9f5fe1e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4121064815718698899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071486660176057862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861e2d9422113ab4abe990db142ce1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
