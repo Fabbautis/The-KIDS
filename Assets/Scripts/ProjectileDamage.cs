@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ProjectileDamage : MonoBehaviour
 {
     public double health = 1.0;
-    private bool isDead = false;
+    public bool isDead = false;
     private float timer;
     private float timeSinceDead =0;
     private TargetMovementAndRespawn respawner;
@@ -28,12 +28,10 @@ public class ProjectileDamage : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (isDead){
-        }
         if (isDead && timer> (timeSinceDead +5.0f)){
             respawner.respawnTarget();
             playerSourcePlayer.PlayOneShot(spawnSFX, 0.6f);
-            isDead =false;
+            isDead = false;
         }
 
     }

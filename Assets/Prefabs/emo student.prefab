@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 8152936839458668679}
   - component: {fileID: 7916922012355862341}
   - component: {fileID: 4121064815718698899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: emo student
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,3 +948,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  spawnSFX: {fileID: 0}
+  deathSFX: {fileID: 0}

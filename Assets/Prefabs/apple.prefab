@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1893581249354811859}
   - component: {fileID: 6240412787200854409}
   - component: {fileID: 5897735174613153628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: apple
   m_TagString: Teacher Projectile
   m_Icon: {fileID: 0}

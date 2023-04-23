@@ -892,7 +892,9 @@ GameObject:
   - component: {fileID: 144017685}
   - component: {fileID: 144017683}
   - component: {fileID: 144017686}
-  m_Layer: 0
+  - component: {fileID: 144017687}
+  - component: {fileID: 144017688}
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1054,6 +1056,35 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144017681}
   m_Enabled: 1
+--- !u!65 &144017687
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144017681}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &144017688
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144017681}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &146915057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2145,7 +2176,7 @@ GameObject:
   - component: {fileID: 426233292}
   - component: {fileID: 426233293}
   - component: {fileID: 426233294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a15496b9e603104b8750e0afbc66caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerLevel: 2
+  triggerLevel: 1
 --- !u!1 &436952363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,13 +2923,13 @@ GameObject:
   m_Component:
   - component: {fileID: 661708768}
   - component: {fileID: 661708769}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dynamic Music thingy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &661708768
 Transform:
   m_ObjectHideFlags: 0
@@ -2932,7 +2963,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentAdaptiveLevel: 0
-  snapshotLevels: []
+  snapshotLevels:
+  - {fileID: -8554494126716016377, guid: fe4691195a7bfca4d90c4f56adcd518b, type: 2}
+  - {fileID: 24500006, guid: fe4691195a7bfca4d90c4f56adcd518b, type: 2}
+  - {fileID: 8041988509404293945, guid: fe4691195a7bfca4d90c4f56adcd518b, type: 2}
+  - {fileID: 6042484873878581395, guid: fe4691195a7bfca4d90c4f56adcd518b, type: 2}
+  - {fileID: -7758084915364392958, guid: fe4691195a7bfca4d90c4f56adcd518b, type: 2}
+  - {fileID: -5228820960377671341, guid: fe4691195a7bfca4d90c4f56adcd518b, type: 2}
   transitionTime: 2.5
 --- !u!1 &674929852
 GameObject:
@@ -4600,7 +4637,7 @@ GameObject:
   - component: {fileID: 1053826710}
   - component: {fileID: 1053826711}
   - component: {fileID: 1053826712}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Computer Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4647,7 +4684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a15496b9e603104b8750e0afbc66caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerLevel: 1
+  triggerLevel: 2
 --- !u!1 &1100115112
 GameObject:
   m_ObjectHideFlags: 0
@@ -4903,8 +4940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1211226685}
   - component: {fileID: 1211226686}
-  - component: {fileID: 1211226687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4937,21 +4973,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.387791, y: 4.0510206, z: 11.718824}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1211226687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211226684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a15496b9e603104b8750e0afbc66caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerLevel: 3
+  m_Size: {x: 15.661739, y: 4.0510206, z: 11.718824}
+  m_Center: {x: 0.1702547, y: 0, z: 0}
 --- !u!1 &1223352284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,8 +5858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402438007}
   - component: {fileID: 1402438008}
-  - component: {fileID: 1402438009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy Area Doorway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5869,21 +5891,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.140098, y: 4.0510206, z: 3.9524002}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1402438009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402438006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a15496b9e603104b8750e0afbc66caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerLevel: 3
+  m_Size: {x: 9.001885, y: 4.0510206, z: 3.9524002}
+  m_Center: {x: -0.2195487, y: 0, z: 0}
 --- !u!1 &1404004824
 GameObject:
   m_ObjectHideFlags: 0
@@ -6384,7 +6393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1248426979138479726, guid: ce0fb7e27af172d49b5ad7c08b4a37b3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1248426979138479726, guid: ce0fb7e27af172d49b5ad7c08b4a37b3, type: 3}
       propertyPath: m_LocalScale.x
@@ -6543,7 +6552,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1593920078164078185, guid: ce0e0d1ca08f337438757c108be37f98, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1593920078164078185, guid: ce0e0d1ca08f337438757c108be37f98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6777,7 +6786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 696435253322704293, guid: 0dc5f23f8eeef334ab8dffef503aa1d2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 696435253322704293, guid: 0dc5f23f8eeef334ab8dffef503aa1d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7073,7 +7082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2767410109698879976, guid: e90a37fa71047ae48a43fd0883e312b1, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2767410109698879976, guid: e90a37fa71047ae48a43fd0883e312b1, type: 3}
       propertyPath: m_LocalScale.y
@@ -7662,7 +7671,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7227580249411413151, guid: ad69290b80456e34cb4e5d6e252299bf, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7227580249411413151, guid: ad69290b80456e34cb4e5d6e252299bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7753,8 +7762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1677268042}
   - component: {fileID: 1677268043}
-  - component: {fileID: 1677268044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hamster Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7787,21 +7795,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.387791, y: 4.0510206, z: 3.1820965}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1677268044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677268041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a15496b9e603104b8750e0afbc66caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerLevel: 4
+  m_Size: {x: 16.244974, y: 4.0510206, z: 3.1820965}
+  m_Center: {x: -0.020192146, y: 0, z: 0}
 --- !u!1001 &1679609441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9601,7 +9596,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064059793}
-  - component: {fileID: 2064059792}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -9609,102 +9603,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &2064059792
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064059791}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b5fc76aa6bcb6484a9ea695482192d8d, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &2064059793
 Transform:
   m_ObjectHideFlags: 0
@@ -10806,6 +10704,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 715877035}
     m_Modifications:
+    - target: {fileID: 4121064815718698899, guid: 3860cdf62ba216b448fec4521ecfba6f, type: 3}
+      propertyPath: isDead
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4121064815718698899, guid: 3860cdf62ba216b448fec4521ecfba6f, type: 3}
       propertyPath: deathSFX
       value: 
